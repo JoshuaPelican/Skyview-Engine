@@ -1,2 +1,8 @@
-﻿  Window.cpp
+﻿  SkyviewEngine.cpp
+  demo.cpp
+  GameState.cpp
+  Module.cpp
+  Rendering.cpp
+  Object.cpp
+  Generating Code...
   Skyview Engine.vcxproj -> C:\Users\pelki\Desktop\C++\Skyview-Engine\bin\Debug\Skyview Engine.exe

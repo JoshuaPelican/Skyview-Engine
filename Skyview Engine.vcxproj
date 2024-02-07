@@ -56,7 +56,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -73,10 +73,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\core\Window.cpp" />
-    <ClCompile Include="src\test\test.cpp" />
+    <ClCompile Include="src\core\GameState.cpp" />
+    <ClCompile Include="src\object\Object.cpp" />
+    <ClCompile Include="src\rendering\Renderer2D.cpp" />
+    <ClCompile Include="src\core\Module.cpp" />
+    <ClCompile Include="src\core\Rendering.cpp" />
+    <ClCompile Include="src\SkyviewEngine.cpp" />
+    <ClCompile Include="src\rendering\Window.cpp" />
+    <ClCompile Include="src\_demo\demo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\core\GameState.h" />
     <ClInclude Include="lib\sdl2\include\begin_code.h" />
     <ClInclude Include="lib\sdl2\include\close_code.h" />
     <ClInclude Include="lib\sdl2\include\SDL.h" />
@@ -155,8 +162,12 @@
     <ClInclude Include="lib\sdl2\include\SDL_version.h" />
     <ClInclude Include="lib\sdl2\include\SDL_video.h" />
     <ClInclude Include="lib\sdl2\include\SDL_vulkan.h" />
-    <ClInclude Include="src\core.h" />
-    <ClInclude Include="src\core\Window.h" />
+    <ClInclude Include="src\object\Object.h" />
+    <ClInclude Include="src\rendering\Renderer2D.h" />
+    <ClInclude Include="src\core\Module.h" />
+    <ClInclude Include="src\core\Rendering.h" />
+    <ClInclude Include="src\SkyviewEngine.h" />
+    <ClInclude Include="src\rendering\Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
