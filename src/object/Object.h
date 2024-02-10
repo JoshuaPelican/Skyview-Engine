@@ -1,16 +1,19 @@
 #pragma once
 
+#include <string>
+using namespace std;
+
 #include "../rendering/Renderer2D.h"
 
 class Object
 {
 public:
-	Object(char* name, char* imgPath);
+	Object(string name, string imgPath);
 	~Object();
 	//void Enable();
 	//void Disable();
 	//void Update();
 
-	char* name = "";
+	string name = "New Object";
 	Renderer2D* renderer = 0;
 };

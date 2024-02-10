@@ -45,6 +45,7 @@
     <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>$(ProjectDir)lib\sdl2\lib\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin-int\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -73,6 +74,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\core\Application.cpp" />
     <ClCompile Include="src\core\GameState.cpp" />
     <ClCompile Include="src\object\Object.cpp" />
     <ClCompile Include="src\rendering\Renderer2D.cpp" />
@@ -80,9 +82,10 @@
     <ClCompile Include="src\core\Rendering.cpp" />
     <ClCompile Include="src\SkyviewEngine.cpp" />
     <ClCompile Include="src\rendering\Window.cpp" />
-    <ClCompile Include="src\_demo\demo.cpp" />
+    <ClCompile Include="src\_demo\code\DemoApp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\core\Application.h" />
     <ClInclude Include="src\core\GameState.h" />
     <ClInclude Include="lib\sdl2\include\begin_code.h" />
     <ClInclude Include="lib\sdl2\include\close_code.h" />
@@ -168,6 +171,7 @@
     <ClInclude Include="src\core\Rendering.h" />
     <ClInclude Include="src\SkyviewEngine.h" />
     <ClInclude Include="src\rendering\Window.h" />
+    <ClInclude Include="src\_demo\code\DemoApp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

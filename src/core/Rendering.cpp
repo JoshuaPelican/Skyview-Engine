@@ -21,8 +21,12 @@ void Rendering::Update()
 
 	for each (Object* obj in gameState->objects)
 	{
-		if (obj->renderer->surface == NULL)
+		if (obj->renderer->mediaPath == "")
 			continue;
+
+		if (!obj->renderer->isLoaded)
+			if (!obj->renderer->LoadSurface(window->screenSurface->format))
+				continue;
 
 		window->Blit(obj->renderer->surface);
 	}

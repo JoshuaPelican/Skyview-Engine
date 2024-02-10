@@ -1,10 +1,9 @@
 #include "Object.h"
 
-Object::Object(char* name, char* imgPath)
+Object::Object(string name, string mediaPath)
 {
 	this->name = name;
-	renderer = new Renderer2D();
-	renderer->LoadMedia(imgPath);
+	renderer = new Renderer2D(mediaPath);
 }
 
 Object::~Object()

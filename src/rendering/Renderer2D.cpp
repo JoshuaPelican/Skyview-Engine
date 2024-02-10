@@ -1,9 +1,8 @@
 #include "Renderer2D.h"
-#include <stdio.h>
 
-Renderer2D::Renderer2D()
+Renderer2D::Renderer2D(string mediaPath)
 {
-
+    SetMedia(mediaPath);
 }
 
 Renderer2D::~Renderer2D()
@@ -12,16 +11,37 @@ Renderer2D::~Renderer2D()
     surface = NULL;
 }
 
-bool Renderer2D::LoadMedia(char* filePath)
+void Renderer2D::SetMedia(string mediaPath)
 {
-    bool success = true;
+    this->mediaPath = mediaPath;
+    isLoaded = false;
+}
 
-    surface = SDL_LoadBMP(filePath);
+bool Renderer2D::LoadSurface(const SDL_PixelFormat* format)
+{
+    if(surface)
+        delete surface;
+
+    //Load image at specified path
+    SDL_Surface* loadedSurface = SDL_LoadBMP(mediaPath.c_str());
+    if (loadedSurface == NULL)
+    {
+        printf("Unable to load image %s! SDL Error: %s\n", mediaPath.c_str(), SDL_GetError());
+        return false;
+    }
+    
+    //Convert surface to screen format
+    surface = SDL_ConvertSurface(loadedSurface, format, 0);
+    //Get rid of old loaded surface
+    SDL_FreeSurface(loadedSurface);
     if (surface == NULL)
     {
-        printf("Unable to load image %s! SDL Error: %s\n", filePath, SDL_GetError());
-        success = false;
+        printf("Unable to optimize image %s! SDL Error: %s\n", mediaPath.c_str(), SDL_GetError());
+        return false;
     }
 
-    return success;
+    printf("Loaded media at path: %s\n", mediaPath.c_str());
+
+    isLoaded = true;
+    return true;
 }

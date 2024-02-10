@@ -1,9 +1,13 @@
 #include "SkyviewEngine.h"
 #include <SDL.h>
 
-SkyviewEngine::SkyviewEngine()
+SkyviewEngine* SkyviewEngine::instance = 0;
+
+SkyviewEngine::SkyviewEngine(Application* app)
 {
 	Enable();
+	app->Load();
+	GameLoop();
 }
 
 SkyviewEngine::~SkyviewEngine()
@@ -14,6 +18,11 @@ SkyviewEngine::~SkyviewEngine()
 void SkyviewEngine::Enable()
 {
 	printf("Skyview Engine Starting...\n\n");
+
+	if (instance != NULL)
+		delete instance;
+
+	instance = this;
 
 	//Initialize SDL
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
@@ -26,10 +35,6 @@ void SkyviewEngine::Enable()
 
 	renderModule = new Rendering();
 	renderModule->SetState(gameState);
-
-	CreateObject("Test Object 1", "./src/_demo/images/test.bmp");
-
-	GameLoop();
 }
 
 void SkyviewEngine::Update()
@@ -63,10 +68,10 @@ void SkyviewEngine::GameLoop()
 	}
 }
 
-Object* SkyviewEngine::CreateObject(char* name, char* imgPath)
+Object* SkyviewEngine::CreateObject(string name, string imgPath)
 {
 	Object* newObject = new Object(name, imgPath);
-	printf("New Object Created: %s\n", name);
+	printf("New Object Created: %s\n", name.c_str());
 
 	gameState->objects.push_back(newObject);
 

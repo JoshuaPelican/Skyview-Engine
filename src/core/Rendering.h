@@ -10,7 +10,7 @@ class Rendering : public Module
 		Rendering();
 		~Rendering();
 		void Update() override;
-		Window* window = 0;
+		Window* window;
 
 	private:
 		void Enable() override;

@@ -1,25 +1,31 @@
 #pragma once
 
+#include <string>
+using namespace std;
+
 #include "core/Module.h"
 #include "core/Rendering.h"
 #include "core/GameState.h"
+#include "core/Application.h"
 
-class GameState;
-class Rendering;
+#define SE SkyviewEngine::instance
+
 class Object;
 
 class SkyviewEngine : Module
 {
 public:
-	SkyviewEngine();
+	SkyviewEngine(Application* app);
 	~SkyviewEngine();
 
-	virtual void Enable() override;
-	virtual void Disable() override;
-	virtual void Update() override;
+	void Enable() override;
+	void Disable() override;
+	void Update() override;
 
 	void GameLoop();
-	Object* CreateObject(char* name, char* imgPath);
+	Object* CreateObject(string name, string imgPath);
+
+	static SkyviewEngine* instance;
 
 	Rendering* renderModule = 0;
 	GameState* gameState = 0;
