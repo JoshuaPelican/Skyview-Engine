@@ -1,8 +1,9 @@
 #pragma once
 
 #include "Module.h"
-#include "../rendering/Window.h"
-#include "../rendering/Renderer2D.h"
+
+class Object;
+class Window;
 
 class Rendering : public Module
 {
@@ -10,6 +11,9 @@ class Rendering : public Module
 		Rendering();
 		~Rendering();
 		void Update() override;
+
+		void RenderObject(Object* obj);
+
 		Window* window;
 
 	private:

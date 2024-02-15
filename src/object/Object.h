@@ -3,7 +3,8 @@
 #include <string>
 using namespace std;
 
-#include "../rendering/Renderer2D.h"
+#include "../object/components/Renderer2D.h"
+#include "../object/components/Transform2D.h"
 
 class Object
 {
@@ -14,6 +15,9 @@ public:
 	//void Disable();
 	//void Update();
 
+	SDL_FRect* GetRect() const;
+
 	string name = "New Object";
 	Renderer2D* renderer = 0;
+	Transform2D* transform = 0;
 };

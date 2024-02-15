@@ -12,5 +12,7 @@ int main(int argc, char* args[])
 
 void DemoApp::Load()
 {
-	SE->CreateObject("Test Object 1", "./src/_demo/images/test.bmp");
+	Object* obj = SE->CreateObject("Test Object 1", "./src/_demo/images/test.bmp");
+	obj->transform->Move(100, 100);
+	obj->transform->Scale(0.5f, 0.5f);
 }

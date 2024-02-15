@@ -1,16 +1,18 @@
 #pragma once
 
+#include <SDL.h>
+#include <SDL_image.h>
 #include <string>
 using namespace std;
 
-#include "core/Module.h"
-#include "core/Rendering.h"
-#include "core/GameState.h"
 #include "core/Application.h"
+#include "core/Module.h"
+#include "object/object.h"
+
+class Rendering;
+class GameState;
 
 #define SE SkyviewEngine::instance
-
-class Object;
 
 class SkyviewEngine : Module
 {

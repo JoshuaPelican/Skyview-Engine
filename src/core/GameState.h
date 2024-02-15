@@ -1,9 +1,9 @@
 #pragma once
 
 #include <list>
-#include "../object/Object.h"
-
 using namespace std;
+
+class Object;
 
 class GameState
 {

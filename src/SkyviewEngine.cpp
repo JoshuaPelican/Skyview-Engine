@@ -1,5 +1,7 @@
 #include "SkyviewEngine.h"
-#include <SDL.h>
+
+#include "core/Rendering.h"
+#include "core/GameState.h"
 
 SkyviewEngine* SkyviewEngine::instance = 0;
 
@@ -28,6 +30,14 @@ void SkyviewEngine::Enable()
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
 	{
 		printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
+		return;
+	}
+
+	//Initialize IMG loading
+	int imgFlags = IMG_INIT_PNG | IMG_INIT_JPG;
+	if (!(IMG_Init(imgFlags) & imgFlags))
+	{
+		printf("SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError());
 		return;
 	}
 

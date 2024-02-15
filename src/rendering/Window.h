@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SDL.h>
+#include <stdio.h>
 
 class Window
 {
@@ -9,10 +10,11 @@ class Window
 		~Window();
 		void Clear();
 		void Draw();
-		void Blit(SDL_Surface* surface);
+		void RenderCopy(SDL_Texture* texture, SDL_Rect* sourceRect);
 
-		SDL_Surface* screenSurface = NULL;
 		SDL_Window* window = NULL;
-	private:
+		SDL_Renderer* renderer = NULL;
+		SDL_Rect* viewport = NULL;
 
+		int width = 0, height = 0;
 };
