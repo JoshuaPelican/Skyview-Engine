@@ -18,6 +18,9 @@ public:
 	void Update() override {};
 	void Disable() override {};
 
+	void SetSprite(string mediaPath);
+	bool LoadMedia(SDL_Renderer* renderer);
+
 	Sprite* sprite = 0;
 
 	bool flipX = false, flipY = false; // TODO: Currently unused, need to use these

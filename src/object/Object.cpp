@@ -4,11 +4,10 @@
 
 #include "../rendering/Sprite.h"
 
-Object::Object(string name, string mediaPath)
+Object::Object(string name)
 {
 	this->name = name;
 	renderer = new Renderer2D(this);
-	renderer->sprite = new Sprite(mediaPath);
 	transform = new Transform2D(this);
 }
 

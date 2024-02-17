@@ -33,7 +33,7 @@ void Rendering::RenderObject(Object* obj)
 		return;
 
 	if (!obj->renderer->sprite->isLoaded)
-		if (!obj->renderer->sprite->LoadMedia(window->renderer))
+		if (!obj->renderer->LoadMedia(window->renderer))
 			return;
 
 	SDL_RenderCopyExF(window->renderer, obj->renderer->sprite->texture, NULL, obj->GetRect(), obj->transform->angle, obj->transform->pivot, SDL_FLIP_NONE);

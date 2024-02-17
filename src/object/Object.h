@@ -11,7 +11,7 @@ using namespace std;
 class Object
 {
 public:
-	Object(string name, string imgPath);
+	Object(string name);
 	~Object();
 
 	SDL_FRect* GetRect() const;

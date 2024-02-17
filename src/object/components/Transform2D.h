@@ -18,6 +18,7 @@ public:
 	void Rotate(float angle);
 	void Scale(float x, float y);
 
+	void RecalculateCenter();
 
 	SDL_FPoint* position = 0;
 	SDL_FPoint* scale = 0;

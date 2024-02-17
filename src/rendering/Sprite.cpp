@@ -25,7 +25,6 @@ bool Sprite::LoadMedia(SDL_Renderer* renderer)
     if (texture)
         SDL_DestroyTexture(texture);
 
-    //Convert surface to screen format
     texture = IMG_LoadTexture(renderer, mediaPath.c_str());
     if (texture == NULL)
     {

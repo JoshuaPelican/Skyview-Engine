@@ -15,11 +15,7 @@ Transform2D::Transform2D(Object* object) : Component(object)
 	angle = 0;
 
 	center = new SDL_FPoint();
-	center->x = object->renderer->sprite->width;
-	center->y = object->renderer->sprite->height;
-	pivot = new SDL_FPoint();
-	pivot->x = center->x; // TEMP: Make this configurable
-	pivot->y = center->y; // TEMP: Make this configurable
+	pivot = center; // TODO: Make this configurable
 }
 
 void Transform2D::Move(float x, float y)
@@ -37,4 +33,10 @@ void Transform2D::Scale(float x, float y)
 {
 	scale->x *= x;
 	scale->y *= y;
+}
+
+void Transform2D::RecalculateCenter()
+{
+	center->x = object->renderer->sprite->width * scale->x / 2;
+	center->y = object->renderer->sprite->height * scale->y / 2;
 }

@@ -71,9 +71,11 @@ void SkyviewEngine::Update()
 	renderModule->Update();
 }
 
-Object* SkyviewEngine::CreateObject(string name, string imgPath)
+Object* SkyviewEngine::CreateObject(string name, string mediaPath)
 {
-	Object* newObject = new Object(name, imgPath);
+	Object* newObject = new Object(name);
+	newObject->renderer->SetSprite(mediaPath);
+
 	gameState->AddObject(newObject);
 
 	printf("New Object Created: %s\n", name.c_str());
