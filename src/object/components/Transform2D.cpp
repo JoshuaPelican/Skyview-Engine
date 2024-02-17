@@ -2,10 +2,8 @@
 
 #include "../Object.h"
 
-Transform2D::Transform2D(Object* obj)
+Transform2D::Transform2D(Object* object) : Component(object)
 {
-	object = obj;
-
 	position = new SDL_FPoint();
 	position->x = 0;
 	position->y = 0;
@@ -17,16 +15,11 @@ Transform2D::Transform2D(Object* obj)
 	angle = 0;
 
 	center = new SDL_FPoint();
-	center->x = obj->renderer->sprite->width;
-	center->y = obj->renderer->sprite->height;
+	center->x = object->renderer->sprite->width;
+	center->y = object->renderer->sprite->height;
 	pivot = new SDL_FPoint();
 	pivot->x = center->x; // TEMP: Make this configurable
 	pivot->y = center->y; // TEMP: Make this configurable
-}
-
-Transform2D::~Transform2D()
-{
-
 }
 
 void Transform2D::Move(float x, float y)

@@ -2,15 +2,10 @@
 
 Application::Application(string name)
 {
-	this->appName = name;
+	this->name = name;
 }
 
 Application::~Application()
-{
-
-}
-
-void Application::Load()
 {
 
 }

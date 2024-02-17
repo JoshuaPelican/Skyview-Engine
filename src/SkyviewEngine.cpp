@@ -7,18 +7,6 @@ SkyviewEngine* SkyviewEngine::instance = 0;
 
 SkyviewEngine::SkyviewEngine(Application* app)
 {
-	Enable();
-	app->Load();
-	GameLoop();
-}
-
-SkyviewEngine::~SkyviewEngine()
-{
-	Disable();
-}
-
-void SkyviewEngine::Enable()
-{
 	printf("Skyview Engine Starting...\n\n");
 
 	if (instance != NULL)
@@ -45,14 +33,13 @@ void SkyviewEngine::Enable()
 
 	renderModule = new Rendering();
 	renderModule->SetState(gameState);
+
+	app->Load();
+
+	GameLoop();
 }
 
-void SkyviewEngine::Update()
-{
-	renderModule->Update();
-}
-
-void SkyviewEngine::Disable()
+SkyviewEngine::~SkyviewEngine()
 {
 	delete gameState;
 	delete renderModule;
@@ -72,18 +59,24 @@ void SkyviewEngine::GameLoop()
 			//User requests quit
 			if (e.type == SDL_QUIT)
 				quit = true;
-
-			Update();
 		}
+
+		Update();
 	}
+}
+
+void SkyviewEngine::Update()
+{
+	gameState->Update();
+	renderModule->Update();
 }
 
 Object* SkyviewEngine::CreateObject(string name, string imgPath)
 {
 	Object* newObject = new Object(name, imgPath);
-	printf("New Object Created: %s\n", name.c_str());
+	gameState->AddObject(newObject);
 
-	gameState->objects.push_back(newObject);
+	printf("New Object Created: %s\n", name.c_str());
 
 	return newObject;
 }

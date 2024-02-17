@@ -1,5 +1,7 @@
 #include "Object.h"
 
+#include <typeinfo>
+
 #include "../rendering/Sprite.h"
 
 Object::Object(string name, string mediaPath)
@@ -13,6 +15,11 @@ Object::Object(string name, string mediaPath)
 Object::~Object()
 {
 	delete renderer;
+	delete transform;
+	for each (Component* component in components)
+	{
+		delete component;
+	}
 }
 
 SDL_FRect* Object::GetRect() const
@@ -24,4 +31,10 @@ SDL_FRect* Object::GetRect() const
 	rect->h = renderer->sprite->height * transform->scale->y;
 
 	return rect;
+}
+
+void Object::AddComponent(Component* component)
+{
+	components.push_back(component);
+	component->Enable();
 }

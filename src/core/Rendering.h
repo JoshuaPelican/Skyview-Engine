@@ -15,8 +15,4 @@ class Rendering : public Module
 		void RenderObject(Object* obj);
 
 		Window* window;
-
-	private:
-		void Enable() override;
-		void Disable() override;
 };

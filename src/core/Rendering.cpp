@@ -7,17 +7,12 @@
 
 Rendering::Rendering()
 {
-	Enable();
+	window = new Window("Window Name", 0, 0, 500, 500);
 }
 
 Rendering::~Rendering()
 {
-	Disable();
-}
-
-void Rendering::Enable()
-{
-	window = new Window("Window Name", 0, 0, 500, 500);
+	delete window;
 }
 
 void Rendering::Update()
@@ -30,11 +25,6 @@ void Rendering::Update()
 	}
 
 	window->Draw();
-}
-
-void Rendering::Disable()
-{
-	delete window;
 }
 
 void Rendering::RenderObject(Object* obj)

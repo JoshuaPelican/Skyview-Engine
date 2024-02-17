@@ -6,10 +6,10 @@ using namespace std;
 class Application
 {
 public:
-	Application(string appName);
+	Application(string name);
 	~Application();
 	virtual void Load() = 0;
 
-	string appName;
+	string name;
 };
 

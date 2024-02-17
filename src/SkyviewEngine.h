@@ -19,9 +19,6 @@ class SkyviewEngine : Module
 public:
 	SkyviewEngine(Application* app);
 	~SkyviewEngine();
-
-	void Enable() override;
-	void Disable() override;
 	void Update() override;
 
 	void GameLoop();
