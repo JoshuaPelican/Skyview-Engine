@@ -10,7 +10,6 @@ class Window
 		~Window();
 		void Clear();
 		void Draw();
-		void RenderCopy(SDL_Texture* texture, SDL_Rect* sourceRect);
 
 		SDL_Window* window = NULL;
 		SDL_Renderer* renderer = NULL;

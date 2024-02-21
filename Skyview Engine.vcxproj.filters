@@ -36,9 +36,6 @@
     <ClCompile Include="src\core\GameState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\_demo\code\DemoApp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\core\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -48,13 +45,19 @@
     <ClCompile Include="src\rendering\Sprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\_demo\code\Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="demo\code\DemoApp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="demo\code\Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\object\Component.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\Time.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\Input.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -314,9 +317,6 @@
     <ClInclude Include="src\core\GameState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\_demo\code\DemoApp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\core\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -326,9 +326,6 @@
     <ClInclude Include="src\rendering\Sprite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\_demo\code\Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\object\Component.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -336,6 +333,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="demo\code\Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\Time.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\Input.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

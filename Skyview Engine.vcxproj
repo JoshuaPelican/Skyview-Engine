@@ -77,6 +77,7 @@
   <ItemGroup>
     <ClCompile Include="demo\code\DemoApp.cpp" />
     <ClCompile Include="demo\code\Player.cpp" />
+    <ClCompile Include="src\core\Input.cpp" />
     <ClCompile Include="src\object\Component.cpp" />
     <ClCompile Include="src\rendering\Sprite.cpp" />
     <ClCompile Include="src\core\Application.cpp" />
@@ -88,10 +89,12 @@
     <ClCompile Include="src\SkyviewEngine.cpp" />
     <ClCompile Include="src\rendering\Window.cpp" />
     <ClCompile Include="src\object\components\Transform2D.cpp" />
+    <ClCompile Include="src\core\Time.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="demo\code\DemoApp.h" />
     <ClInclude Include="demo\code\Player.h" />
+    <ClInclude Include="src\core\Input.h" />
     <ClInclude Include="src\object\Component.h" />
     <ClInclude Include="src\rendering\Sprite.h" />
     <ClInclude Include="src\core\Application.h" />
@@ -181,6 +184,7 @@
     <ClInclude Include="src\SkyviewEngine.h" />
     <ClInclude Include="src\rendering\Window.h" />
     <ClInclude Include="src\object\components\Transform2D.h" />
+    <ClInclude Include="src\core\Time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

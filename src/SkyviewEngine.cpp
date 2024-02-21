@@ -1,7 +1,7 @@
 #include "SkyviewEngine.h"
 
-#include "core/Rendering.h"
 #include "core/GameState.h"
+#include "core/Rendering.h"
 
 SkyviewEngine* SkyviewEngine::instance = 0;
 
@@ -34,6 +34,9 @@ SkyviewEngine::SkyviewEngine(Application* app)
 	renderModule = new Rendering();
 	renderModule->SetState(gameState);
 
+	timeModule = new Time();
+	inputModule = new Input();
+
 	app->Load();
 
 	GameLoop();
@@ -41,8 +44,6 @@ SkyviewEngine::SkyviewEngine(Application* app)
 
 SkyviewEngine::~SkyviewEngine()
 {
-	delete gameState;
-	delete renderModule;
 	SDL_Quit();
 }
 
@@ -67,8 +68,11 @@ void SkyviewEngine::GameLoop()
 
 void SkyviewEngine::Update()
 {
-	gameState->Update();
+	timeModule->Update();
 	renderModule->Update();
+	inputModule->Update();
+
+	gameState->Update();
 }
 
 Object* SkyviewEngine::CreateObject(string name, string mediaPath)

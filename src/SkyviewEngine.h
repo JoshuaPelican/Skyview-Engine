@@ -7,6 +7,9 @@ using namespace std;
 
 #include "core/Application.h"
 #include "core/Module.h"
+#include "core/Time.h"
+#include "core/Input.h"
+
 #include "object/object.h"
 
 class Rendering;
@@ -26,6 +29,10 @@ public:
 
 	static SkyviewEngine* instance;
 
-	Rendering* renderModule = 0;
+private:
 	GameState* gameState = 0;
+
+	Rendering* renderModule = 0;
+	Time* timeModule = 0;
+	Input* inputModule = 0;
 };
