@@ -17,6 +17,7 @@ public:
 	void Enable() override {};
 	void Update() override {};
 	void Disable() override {};
+	void OnCollision(CollisionData data) override {};
 
 	void SetSprite(string mediaPath);
 	bool LoadMedia(SDL_Renderer* renderer);

@@ -1,7 +1,6 @@
 #include "SkyviewEngine.h"
 
 #include "core/GameState.h"
-#include "core/Rendering.h"
 
 SkyviewEngine* SkyviewEngine::instance = 0;
 
@@ -33,6 +32,9 @@ SkyviewEngine::SkyviewEngine(Application* app)
 
 	renderModule = new Rendering();
 	renderModule->SetState(gameState);
+
+	collisionModule = new Collision();
+	collisionModule->SetState(gameState);
 
 	timeModule = new Time();
 	inputModule = new Input();
@@ -70,6 +72,7 @@ void SkyviewEngine::Update()
 {
 	timeModule->Update();
 	renderModule->Update();
+	collisionModule->Update();
 	inputModule->Update();
 
 	gameState->Update();
@@ -78,11 +81,20 @@ void SkyviewEngine::Update()
 Object* SkyviewEngine::CreateObject(string name, string mediaPath)
 {
 	Object* newObject = new Object(name);
-	newObject->renderer->SetSprite(mediaPath);
+	newObject->renderer.SetSprite(mediaPath);
 
 	gameState->AddObject(newObject);
 
 	printf("New Object Created: %s\n", name.c_str());
 
 	return newObject;
+}
+
+void SkyviewEngine::DestroyObject(Object* object)
+{
+	gameState->RemoveObject(object);
+
+	printf("Object Destroyed: %s\n", object->name.c_str());
+
+	//delete object;
 }

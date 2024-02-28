@@ -29,12 +29,16 @@ void Rendering::Update()
 
 void Rendering::RenderObject(Object* obj)
 {
-	if (obj->renderer->sprite == NULL)
+	if (obj->renderer.sprite == NULL)
 		return;
 
-	if (!obj->renderer->sprite->isLoaded)
-		if (!obj->renderer->LoadMedia(window->renderer))
+	if (!obj->renderer.sprite->isLoaded)
+		if (!obj->renderer.LoadMedia(window->renderer))
 			return;
 
-	SDL_RenderCopyExF(window->renderer, obj->renderer->sprite->texture, NULL, obj->GetRect(), obj->transform->angle, obj->transform->pivot, SDL_FLIP_NONE);
+	SDL_FPoint* pivot = new SDL_FPoint();
+	pivot->x = obj->transform.pivot.x;
+	pivot->y = obj->transform.pivot.y;
+
+	SDL_RenderCopyExF(window->renderer, obj->renderer.sprite->texture, NULL, obj->GetRect(), obj->transform.angle, pivot, SDL_FLIP_NONE);
 }

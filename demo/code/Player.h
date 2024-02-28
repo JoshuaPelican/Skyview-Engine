@@ -9,4 +9,5 @@ public:
 	void Enable() override;
 	void Update() override;
 	void Disable() override;
+	void OnCollision(CollisionData data) override;
 };

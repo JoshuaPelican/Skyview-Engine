@@ -7,8 +7,11 @@ using namespace std;
 
 #include "core/Application.h"
 #include "core/Module.h"
+#include "core/Rendering.h"
+#include "core/Collision.h"
 #include "core/Time.h"
 #include "core/Input.h"
+#include "core/math.h"
 
 #include "object/object.h"
 
@@ -26,6 +29,7 @@ public:
 
 	void GameLoop();
 	Object* CreateObject(string name, string imgPath);
+	void DestroyObject(Object* object);
 
 	static SkyviewEngine* instance;
 
@@ -33,6 +37,7 @@ private:
 	GameState* gameState = 0;
 
 	Rendering* renderModule = 0;
+	Collision* collisionModule = 0;
 	Time* timeModule = 0;
 	Input* inputModule = 0;
 };

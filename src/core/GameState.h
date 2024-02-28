@@ -15,6 +15,7 @@ public:
 	void Update() override;
 
 	void AddObject(Object* object);
+	void RemoveObject(Object* object);
 
 	list<Object*> objects;
 };

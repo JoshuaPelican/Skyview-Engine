@@ -9,7 +9,7 @@ class Input : public Module
 public:
 	void Update() override;
 
-	static bool GetKeyDown(SDL_Scancode keyCode);
+	static int GetKeyDown(SDL_Scancode keyCode);
 
 private:
 	static const Uint8* keyStates;

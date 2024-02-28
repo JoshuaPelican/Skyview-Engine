@@ -7,7 +7,7 @@ void Input::Update()
 	Input::keyStates = SDL_GetKeyboardState(NULL);
 }
 
-bool Input::GetKeyDown(SDL_Scancode keyCode)
+int Input::GetKeyDown(SDL_Scancode keyCode)
 {
-	return Input::keyStates[keyCode] == 1;
+	return Input::keyStates[keyCode];
 }

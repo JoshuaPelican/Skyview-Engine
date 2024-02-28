@@ -14,7 +14,7 @@ bool Renderer2D::LoadMedia(SDL_Renderer* renderer)
 {
 	if (sprite->LoadMedia(renderer))
 	{
-		object->transform->RecalculateCenter();
+		object->transform.RecalculateCenter();
 		return true;
 	}
 	return false;

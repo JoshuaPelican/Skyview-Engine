@@ -75,6 +75,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="demo\code\Damageable.cpp" />
+    <ClCompile Include="demo\code\HurtZone.cpp" />
+    <ClCompile Include="src\core\Physics.cpp" />
+    <ClCompile Include="src\object\components\CircleCollider2D.cpp" />
+    <ClCompile Include="src\collision\CollisionData.cpp" />
+    <ClCompile Include="src\core\Collision.cpp" />
+    <ClCompile Include="src\collision\Collider2D.cpp" />
+    <ClCompile Include="src\object\components\BoxCollider2D.cpp" />
     <ClCompile Include="demo\code\DemoApp.cpp" />
     <ClCompile Include="demo\code\Player.cpp" />
     <ClCompile Include="src\core\Input.cpp" />
@@ -90,8 +98,18 @@
     <ClCompile Include="src\rendering\Window.cpp" />
     <ClCompile Include="src\object\components\Transform2D.cpp" />
     <ClCompile Include="src\core\Time.cpp" />
+    <ClCompile Include="src\math\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="demo\code\Damageable.h" />
+    <ClInclude Include="demo\code\HurtZone.h" />
+    <ClInclude Include="src\core\Physics.h" />
+    <ClInclude Include="src\object\components\CircleCollider2D.h" />
+    <ClInclude Include="src\collision\CollisionData.h" />
+    <ClInclude Include="src\core\Collision.h" />
+    <ClInclude Include="src\collision\Collider2D.h" />
+    <ClInclude Include="src\core\Math.h" />
+    <ClInclude Include="src\object\components\BoxCollider2D.h" />
     <ClInclude Include="demo\code\DemoApp.h" />
     <ClInclude Include="demo\code\Player.h" />
     <ClInclude Include="src\core\Input.h" />
@@ -185,6 +203,7 @@
     <ClInclude Include="src\rendering\Window.h" />
     <ClInclude Include="src\object\components\Transform2D.h" />
     <ClInclude Include="src\core\Time.h" />
+    <ClInclude Include="src\math\Vector2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
