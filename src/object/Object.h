@@ -39,8 +39,11 @@ public:
 	}
 
 	string name = "New Object";
+
 	Renderer2D renderer = 0;
 	Transform2D transform = 0;
 	Collider2D* collider = 0;
 	list<Component*> components;
+
+	bool isDestroyed = false;
 };

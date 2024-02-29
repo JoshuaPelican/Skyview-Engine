@@ -95,6 +95,4 @@ void SkyviewEngine::DestroyObject(Object* object)
 	gameState->RemoveObject(object);
 
 	printf("Object Destroyed: %s\n", object->name.c_str());
-
-	//delete object;
 }
