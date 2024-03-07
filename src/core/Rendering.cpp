@@ -42,3 +42,10 @@ void Rendering::RenderObject(Object* obj)
 
 	SDL_RenderCopyExF(window->renderer, obj->renderer.sprite->texture, NULL, obj->GetRect(), obj->transform.angle, pivot, SDL_FLIP_NONE);
 }
+
+void Rendering::DrawRectOutline(SDL_FRect rect, int r, int g, int b)
+{
+	SDL_SetRenderDrawColor(window->renderer, r, g, b, 1);
+	SDL_RenderDrawRectF(window->renderer, &rect);
+	window->Draw();
+}

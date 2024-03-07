@@ -6,6 +6,7 @@ void Damageable::Update()
 
 void Damageable::Enable()
 {
+	currentHealth = maxHealth;
 }
 
 void Damageable::Disable()
@@ -16,10 +17,11 @@ void Damageable::TakeDamage(float damage)
 {
 	currentHealth -= damage;
 
-	printf("Ouch!");
+	printf("Ouch! {%f} health", currentHealth);
 
 	if (currentHealth <= 0)
+	{
 		isDead = true;
-
-	SE->DestroyObject(this->object);
+		SE->DestroyObject(this->object);
+	}
 }

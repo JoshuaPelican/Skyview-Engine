@@ -54,5 +54,5 @@ const Vector2 Vector2::Normalized()
 
 const float Vector2::SquaredDistance(Vector2 a, Vector2 b)
 {
-	return pow(b.x - a.x, 2) + pow(b.y - a.y, 2);
+	return pow(a.x - b.x, 2) + pow(a.y - b.y, 2);
 }

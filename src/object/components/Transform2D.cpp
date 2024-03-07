@@ -48,7 +48,7 @@ void Transform2D::RecalculateCenter()
 	}
 	else
 	{
-		center.x = object->renderer.sprite->width * scale.x / 2;
-		center.y = object->renderer.sprite->height * scale.y / 2;
+		center.x = object->renderer.sprite->width / 2.0f * scale.x;
+		center.y = object->renderer.sprite->height / 2.0f * scale.y;
 	}
 }

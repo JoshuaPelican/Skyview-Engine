@@ -21,9 +21,6 @@ Window::Window(char* name, int x, int y, int width, int height)
 		return;
 	}
 
-	// Initialize renderer color
-	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-
 	// Initialize the viewport
 	viewport = new SDL_Rect();
 	viewport->x = 0;
@@ -40,6 +37,8 @@ Window::~Window()
 
 void Window::Clear()
 {
+	// Initialize renderer color
+	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 	// Clear screen
 	SDL_RenderClear(renderer);
 }

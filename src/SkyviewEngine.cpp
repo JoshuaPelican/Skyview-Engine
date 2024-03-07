@@ -32,6 +32,9 @@ SkyviewEngine::SkyviewEngine(Application* app)
 
 	renderModule = new Rendering();
 	renderModule->SetState(gameState);
+	debugModule = new Debug();
+	debugModule->SetState(gameState);
+	debugModule->SetRenderer(renderModule);
 
 	collisionModule = new Collision();
 	collisionModule->SetState(gameState);
@@ -74,6 +77,7 @@ void SkyviewEngine::Update()
 	renderModule->Update();
 	collisionModule->Update();
 	inputModule->Update();
+	debugModule->Update();
 
 	gameState->Update();
 }

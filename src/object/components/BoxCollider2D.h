@@ -12,6 +12,6 @@ public:
 	CollisionData GetCollision(Collider2D* other) override;
 
 	Vector2 center = Vector2(0, 0);
-	Vector2 scale = Vector2(1, 1);
+	Vector2 size = Vector2(240, 240);
 };
 

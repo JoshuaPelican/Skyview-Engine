@@ -20,8 +20,8 @@ Object::~Object()
 SDL_FRect* Object::GetRect() const
 {
 	SDL_FRect* rect = new SDL_FRect();
-	rect->x = transform.position.x;
-	rect->y = transform.position.y;
+	rect->x = transform.position.x - transform.center.x;
+	rect->y = transform.position.y - transform.center.y;
 	rect->w = renderer.sprite->width * transform.scale.x;
 	rect->h = renderer.sprite->height * transform.scale.y;
 

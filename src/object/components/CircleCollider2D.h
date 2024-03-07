@@ -12,6 +12,6 @@ public:
 	CollisionData GetCollision(Collider2D* other) override;
 
 	Vector2 center = Vector2(0, 0);
-	float radius = 30;
+	float radius = 64;
 };
 

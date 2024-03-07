@@ -11,6 +11,7 @@ using namespace std;
 #include "core/Collision.h"
 #include "core/Time.h"
 #include "core/Input.h"
+#include "core/Debug.h"
 #include "core/math.h"
 
 #include "object/object.h"
@@ -40,4 +41,5 @@ private:
 	Collision* collisionModule = 0;
 	Time* timeModule = 0;
 	Input* inputModule = 0;
+	Debug* debugModule = 0;
 };

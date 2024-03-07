@@ -75,6 +75,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\core\Debug.cpp" />
     <ClCompile Include="demo\code\Damageable.cpp" />
     <ClCompile Include="demo\code\HurtZone.cpp" />
     <ClCompile Include="src\core\Physics.cpp" />
@@ -101,6 +102,7 @@
     <ClCompile Include="src\math\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\core\Debug.h" />
     <ClInclude Include="demo\code\Damageable.h" />
     <ClInclude Include="demo\code\HurtZone.h" />
     <ClInclude Include="src\core\Physics.h" />

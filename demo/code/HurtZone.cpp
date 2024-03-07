@@ -27,4 +27,6 @@ void HurtZone::OnCollision(CollisionData collision)
 		return;
 
 	d->TakeDamage(zoneDamage * Time::deltaTime);
+
+	printf("{%f}", Time::deltaTime);
 }

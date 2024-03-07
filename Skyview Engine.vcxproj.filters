@@ -87,6 +87,9 @@
     <ClCompile Include="demo\code\HurtZone.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\core\Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\sdl2\include\begin_code.h">
@@ -396,6 +399,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="demo\code\HurtZone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\Debug.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
