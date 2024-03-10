@@ -1,5 +1,8 @@
 #include "Sprite.h"
 
+#include <cstdio>
+#include <cstring>
+
 Sprite::Sprite(string mediaPath)
 {
     SetMedia(mediaPath);
@@ -25,7 +28,10 @@ bool Sprite::LoadMedia(SDL_Renderer* renderer)
     if (texture)
         SDL_DestroyTexture(texture);
 
-    texture = IMG_LoadTexture(renderer, mediaPath.c_str());
+    string path = string(SDL_GetBasePath());
+    path.append(mediaPath);
+
+    texture = IMG_LoadTexture(renderer, path.c_str());
     if (texture == NULL)
     {
         printf("Unable to load texture at %s! SDL Error: %s\n", mediaPath.c_str(), SDL_GetError());

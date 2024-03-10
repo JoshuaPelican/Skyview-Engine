@@ -15,14 +15,14 @@ int main(int argc, char* args[])
 
 void DemoApp::Load()
 {
-	Object* sword = SE->CreateObject("Sword", "./demo/images/weapon_dagger.png");
+	Object* sword = SE->CreateObject("Sword", "../images/weapon_dagger.png");
 	Sword* s = sword->AddComponent<Sword>();
 	auto cSword = new CircleCollider2D(sword);
 	sword->collider = cSword;
 	cSword->radius = 16;
 	sword->collider->isTrigger = true;
 
-	Object* player = SE->CreateObject("Player", "./demo/images/green_character.png");
+	Object* player = SE->CreateObject("Player", "../images/green_character.png");
 	auto cPlayer = new CircleCollider2D(player);
 	player->collider = cPlayer;
 	cPlayer->radius = 32;
@@ -33,30 +33,30 @@ void DemoApp::Load()
 
 	s->pivot = &player->transform;
 
-	Object* wall = SE->CreateObject("Wall R", "./demo/images/tile.png");
+	Object* wall = SE->CreateObject("Wall R", "../images/tile.png");
 	wall->collider = new BoxCollider2D(wall);
 	wall->transform.Move(500, 250);
 	wall->transform.Scale(0.5f, 9);
 	wall->transform.Rotate(0);
 
-	wall = SE->CreateObject("Wall L", "./demo/images/tile.png");
+	wall = SE->CreateObject("Wall L", "../images/tile.png");
 	wall->collider = new BoxCollider2D(wall);
 	wall->transform.Move(0, 250);
 	wall->transform.Scale(0.5, 9);
 
-	wall = SE->CreateObject("Wall T", "./demo/images/tile.png");
+	wall = SE->CreateObject("Wall T", "../images/tile.png");
 	wall->collider = new BoxCollider2D(wall);
 	wall->transform.Move(250, 0);
 	wall->transform.Scale(9, 0.5f);
 
-	wall = SE->CreateObject("Wall B", "./demo/images/tile.png");
+	wall = SE->CreateObject("Wall B", "../images/tile.png");
 	wall->collider = new BoxCollider2D(wall);
 	wall->transform.Move(250, 500);
 	wall->transform.Scale(9, 0.5f);
 
 	for (size_t i = 0; i < 6; i++)
 	{
-		Object* enemy = SE->CreateObject("Enemy", "./demo/images/red_character.png");
+		Object* enemy = SE->CreateObject("Enemy", "../images/red_character.png");
 		auto cEnemy = new CircleCollider2D(enemy);
 		enemy->collider = cEnemy;
 		cEnemy->radius = 32;

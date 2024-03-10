@@ -209,6 +209,22 @@
     <ClInclude Include="src\math\Vector2.h" />
     <ClInclude Include="demo\code\Sword.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="demo\images\barrel.png" />
+    <Image Include="demo\images\circle.png" />
+    <Image Include="demo\images\crate.png" />
+    <Image Include="demo\images\green_character.png" />
+    <Image Include="demo\images\green_hand.png" />
+    <Image Include="demo\images\red_character.png" />
+    <Image Include="demo\images\square.png" />
+    <Image Include="demo\images\tile.png" />
+    <Image Include="demo\images\wall.png" />
+    <Image Include="demo\images\weapon_dagger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="demo\build\Skyview Engine Demo.exe" />
+    <None Include="demo\build\Skyview Engine Demo.pdb" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

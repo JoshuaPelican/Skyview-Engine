@@ -411,4 +411,40 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="demo\images\barrel.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="demo\images\circle.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="demo\images\crate.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="demo\images\green_character.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="demo\images\green_hand.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="demo\images\red_character.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="demo\images\square.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="demo\images\tile.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="demo\images\wall.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="demo\images\weapon_dagger.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="demo\build\Skyview Engine Demo.exe" />
+    <None Include="demo\build\Skyview Engine Demo.pdb" />
+  </ItemGroup>
 </Project>
