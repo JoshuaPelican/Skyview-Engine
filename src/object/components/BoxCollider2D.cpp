@@ -17,3 +17,8 @@ CollisionData BoxCollider2D::GetCollision(Collider2D* other)
 {
 	return CollisionData(other, Vector2(0, 0), Vector2(0, 0), 0);
 }
+
+Vector2 BoxCollider2D::GetCenter() const
+{
+	return this->object->transform.position + this->offset;
+}

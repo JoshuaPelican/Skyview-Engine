@@ -27,6 +27,12 @@ void Transform2D::Move(Vector2 movement)
 	movedThisFrame = true;
 }
 
+void Transform2D::SetPosition(Vector2 position)
+{
+	this->position = position;
+	movedThisFrame = true;
+}
+
 
 void Transform2D::Rotate(float angle)
 {

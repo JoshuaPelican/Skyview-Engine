@@ -17,7 +17,7 @@ void Damageable::TakeDamage(float damage)
 {
 	currentHealth -= damage;
 
-	printf("Ouch! {%f} health", currentHealth);
+	printf("Ouch! {%f} health\n", currentHealth);
 
 	if (currentHealth <= 0)
 	{

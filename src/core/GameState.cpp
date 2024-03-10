@@ -35,6 +35,9 @@ void GameState::Update()
 				component->Update();
 			}
 		}
+
+		if (it == objects.end())
+			break;
 	}
 }
 

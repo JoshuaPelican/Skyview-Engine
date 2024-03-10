@@ -18,6 +18,7 @@ public:
 
 	void Move(float x, float y);
 	void Move(Vector2 movement);
+	void SetPosition(Vector2 position);
 	void Rotate(float angle);
 	void Scale(float x, float y);
 

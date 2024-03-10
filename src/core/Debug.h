@@ -11,5 +11,7 @@ public:
 	void SetRenderer(Rendering* renderModule);
 
 	Rendering* renderModule = 0;
+
+	static bool drawColliders;
 };
 

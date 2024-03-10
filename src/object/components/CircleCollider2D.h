@@ -11,7 +11,9 @@ public:
 	bool IsColliding(Collider2D* other) override;
 	CollisionData GetCollision(Collider2D* other) override;
 
-	Vector2 center = Vector2(0, 0);
+	Vector2 GetCenter() const;
+
+	Vector2 offset = Vector2(0, 0);
 	float radius = 64;
 };
 

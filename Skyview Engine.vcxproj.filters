@@ -45,7 +45,7 @@
     <ClCompile Include="src\rendering\Sprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="demo\code\DemoApp.cpp">
+    <ClCompile Include="demo\DemoApp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="demo\code\Player.cpp">
@@ -88,6 +88,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\core\Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="demo\code\Sword.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -359,7 +362,7 @@
     <ClInclude Include="src\object\Component.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="demo\code\DemoApp.h">
+    <ClInclude Include="demo\DemoApp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="demo\code\Player.h">
@@ -402,6 +405,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\core\Debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="demo\code\Sword.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
